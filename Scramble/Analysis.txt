@@ -1,0 +1,25 @@
+Task 0 Analysis
+Since we have to fetch the from an array using index, it  will be a constant time operation having O(1)
+
+Task 1 Analysis
+This question requires to traverser through all the records of texts and calls . Both operations are linear. and it's complexity will be O(n + m) where n and m are number of records in text and calls respectively
+
+Task 2 Analysis
+In this question I use one loop and pass through the whole call records once which is linear in time. Other operation. It's complexity will be O(n) where n is the total number of records in calls
+
+Task 3 Analysis
+Part (A) : In this part I used two nested loops , one for getting call records and then the second for getting codes. . So every call record has to go through one of the code parsing step and two of them involves the loops. So the worst time complexity will be O(n*m) where n is number of records, and m is the number of time loop runs to parse the code from given string . Then I also sort the result which is of O(nlog(n)). But since O(nlog(n)) < O(n*m) , So it's time complexity will be O(n*m)
+
+Part (B) : In this part I used two nested loops , one for getting call records and then the second for getting codes. . So every call record has to go through the code parsing step  . So the worst time complexity will be O(n*m) where n is number of records, and m is the number of time loop runs to parse the code from given string.
+
+Task4 Analysis
+In this task I first used three loop. 
+- First one adds all the callers in the set.
+- Second one checks if the caller is also a reciver and removes if it holds true
+- Third loop through the text records and removes from unique callers those number that exist in text sender or reciver records
+
+All three loops are linear and have the complexity of O(n).
+
+Then in the end I sorts the list that has the complexity O(klog(k)) where k is the number or remaining numbers in the set .
+
+Since O(klog(k)) > O(n) so works time complexity will be O(klog(k))
